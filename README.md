@@ -1,6 +1,7 @@
-Title: README
- Table of contents: Description, Usage, License
-Descrption: Simple README generator
- Usage: Install Inquirer
+Title: ReadMe
+ Table of contents: Description, Usage, Github, LinkedIn, License
+ Descrption: Easy to use ReadMe generator
+ Usage: Install inquirer
+ Github:johnmoolah
+  LinkedIn:johndelizo
  License:Something
- 
