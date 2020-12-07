@@ -1,4 +1,5 @@
 const inquirer = require(`inquirer`);
+const fs = require("fs")
 
 inquirer
     .prompt([
@@ -9,13 +10,7 @@ inquirer
         { type: "input", name: "TestInput3", message: "enter test 4 "},
     ])
     
-    .then((testRes) => {
-        console.log(testRes);
-    })
-    .catch((err) => console.log(err));
-            
-
-         (({testInput,testInput3})); 
+    .then(({testInput,testInput3}) => {
             const str = `first test results: ${testInput}\nsecond test results: ${testInput3}`;
 
     const html = `
@@ -34,11 +29,12 @@ inquirer
     </html>
     `;
 
-    fs.writeFile("test.html", html, (err) => {
-        if(err) throw err;
+    fs.writeFile("README.html", str, (err) => {
+        if (err) throw err;
         console.log("complete");
         });
-    try{err} finally {console.log(err)};
+    })
+    .catch((err) => console.log(err));
         
         
 
