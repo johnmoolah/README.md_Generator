@@ -1,7 +1,7 @@
-Title: ReadMe
- Table of contents: Description, Usage, Github, LinkedIn, License
- Descrption: Easy to use ReadMe generator
- Usage: Install inquirer
- Github:johnmoolah
-  LinkedIn:johndelizo
- License:Something
+Title: title
+ Installation: installatioon
+ Descrption: description
+ Usage: usage
+ Github:github
+  LinkedIn:linked in
+ License:apache

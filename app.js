@@ -6,65 +6,63 @@ inquirer
         /* Pass your questions in here */
         { 
         type: "input",
-        name: "What is the title of the project?",
-        message: "Title" 
+        name: "Title",
+        message: "What is the name of your project?" 
         },
         { 
         type: "input",
-        name: "userInput2", 
-        message: "Table of Contents" 
+        name: "Installation", 
+        message: "How will the user be able to run your code?" 
         },
         { 
         type: "input",
-        name: "userInput3",
-        message: "Description"
+        name: "Description",
+        message: "Describe your project"
         },
         {
         type:"input",
-        name: "userInput4",
-        message: "Usage"
+        name: "Usage",
+        message: "How is your project useful?"
         },
         {
         type: "input",
-        name: "userInput5", 
-        message: "Github"
+        name: "Github", 
+        message: "What is your Github username?"
         },
         {
         type: "input",
-        name: "userInput6",
-        message: "LinkedIn"
+        name: "LinkedIn",
+        message: "What is your LinkedIn profile?"
         },
         {
         type: "input", 
-        name: "userInput7", 
-        message: "License"},
+        name: "License", 
+        message: "Choose a license for your project",
+        choice: [{
+            name: "Apache License",
+            value: "https://choosealicense.com/licenses/apache-2.0/",
+        
+            name: "MIT License",
+            value:"https://choosealicense.com/licenses/mit/"
+
+        }
+    ]
+    },
     ])
     
     .then(({
-        userInput1, userInput2, userInput3, userInput4, userInput5, userInput6, userInput7}) => {
-            const str = `Title: ${userInput1}\n Table of contents: ${userInput2}\n Descrption: ${userInput3}\n Usage: ${userInput4}\n Github:${userInput5}\n  LinkedIn:${userInput6}\n License:${userInput7}\n`
+        Title, Installation, Description, Usage, Github, LinkedIn, License}) => {
+            const str = `Title: ${Title}\n Installation: ${Installation}\n Descrption: ${Description}\n Usage: ${Usage}\n Github:${Github}\n  LinkedIn:${LinkedIn}\n License:${License}\n`
              
 
-    const html = `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-    <h1>${userInput1}</h1>
-    <h1>${userInput2}</h1>
-    <h1>${userInput3}</h1>
-    <h1>${userInput4}</h1>
-    <h1>${userInput5}</h1>
-    <h1>${userInput6}</h1>
-    <h1>${userInput7}</h1>
-
-    </body>
-    </html>
-    `;
+    const questions = 
+    Title
+    Installation
+    Description
+    Usage
+    Github
+    LinkedIn
+    License;
 
     fs.writeFile("README.md", str, (err) => {
         if (err) throw err;
